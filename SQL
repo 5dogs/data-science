@@ -1,0 +1,10 @@
+
+# 書籍名「コードと回路」より総ページ数の多い書籍一覧を取得してください。
+
+SELECT * 
+FROM books 
+WHERE total_page > (
+  SELECT total_page 
+  FROM books 
+  WHERE name = 'コードと回路'
+);
