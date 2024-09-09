@@ -8,3 +8,15 @@ WHERE total_page > (
   FROM books 
   WHERE name = 'コードと回路'
 );
+
+
+
+書籍テーブルと著者テーブルを結合してください。
+出力項目はbook_name(書籍名)とauthor_name(著者名)です。
+
+SELECT books.name AS book_name, authors.name AS author_name
+FROM books
+JOIN book_authors
+ON books.id = book_authors.book_id
+JOIN authors
+ON book_authors.author_id = authors.id;
